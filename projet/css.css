@@ -1,0 +1,331 @@
+body{
+    height: 100%;
+    background-color: #0F1A30;
+}
+.container{
+    width: 100%;
+    height: auto;
+    display: grid; 
+    grid-template-columns: 0fr 1fr 0fr; 
+    grid-template-rows: 0.2fr 0.4fr 1.8fr 1.8fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "logo menu icon"
+      "tleft texte logolangage"
+      "cours1 cours2 cours3"
+      "exos1 exos2 exos3";
+}
+.navbar{
+    display: grid;
+}
+.logo{
+    background-color: RGB(68,204,170,0.2);
+    border-bottom: 2px solid RGB(68,204,170);
+}
+.logoSite{
+    height: 80px;
+    width: 80px;
+    grid-area: logo;
+    margin-top: 9%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+.logolangage{
+    display: none;
+    grid-area: logolangage;
+    width:100%;
+    height: 90%;
+    margin-right: 10%;
+}
+.logopetit{
+    width: 80%;
+    height: 70%;
+    display: inline-block;
+    margin-left: 100%;
+    margin-right: 2%;
+    margin-top: 10%;
+}
+.menu{
+    display: grid;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.5em;
+    overflow: hidden;
+    align-items: center;
+    background-color: RGB(68,204,170,0.2);
+    border-bottom: 2px solid RGB(68,204,170);
+}
+.menu li{
+    float: left;
+}
+.menu a{
+    color: white;
+    text-align:end;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 200%;
+}
+.icon{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: icon;
+    color: white;
+    align-items: center;
+    font-size: 1.5em;
+    background-color: RGB(68,204,170,0.2);
+    border-bottom: 2px solid RGB(68,204,170);
+    justify-items: center;
+}
+.barre{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+}
+.texte{
+    grid-column-start: tleft;
+    grid-column-end: logolangage; 
+    color: white;
+    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-left: 5%;
+    background-color: RGB(68,204,170,0.3);
+    border-radius: 10% 90% 7% 93% / 19% 38% 62% 81% ;
+}
+.texte .titre{
+    font-size:xx-large;
+    margin: 2% 0;
+
+}
+.txt{
+    font-size:large;
+}
+.titre{
+    font-size:xx-large;
+    color: white;
+    margin: 2% 5%;
+}
+.cours{
+    display: grid;
+    background-color:rgba(128, 128, 128, 0.5);
+    margin-right: 6%;
+    margin-left: 6%;
+    margin-bottom: 2%;
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    grid-column-start: cours1;
+    grid-column-end: cours3;
+    grid-row-start: cours1;
+    height: 100%;
+    width: 90%;
+}
+.exo{
+    display: grid;
+    background-color:rgba(128, 128, 128, 0.5);
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 2%;
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    grid-column-start: exos1;
+    grid-column-end: exos3;
+    grid-row-start: exos1;
+    width: 90%;
+}
+.liste{
+    font-size:large;
+    color: white;
+    margin: 2% 12%;
+    margin-top: 5%;
+    line-height: 200%;
+    list-style:inside;
+}
+.bread{
+    margin-left: 12%;
+    color: white;
+    font-size: x-large;
+    display: inline-block;
+    margin-top: 2%;
+}
+.iframe{
+    display: grid;
+    grid-area: cours;
+    margin-left: 25%;
+    width: 60%;
+    height: 60%;
+}
+.textecours{
+    display: grid;
+    grid-area: cours;
+    color: white;
+    justify-items: center;
+    align-items: end;
+    margin-top: 40%;
+    margin-left: 10%;
+    line-height: 110%;
+}
+
+@media screen and (min-width: 767px) {
+    body{
+        height: 100%;
+        background-color: #0F1A30;
+    }
+    .container{
+        width: 100%;
+        height: auto;
+        display: grid; 
+        grid-template-columns: 0.3fr 2.2fr 0.5fr; 
+        grid-template-rows: 0.4fr 0.8fr 1.8fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "logo menu icon"
+          ". texte logolangage"
+          ". cours .";
+    }
+    .navbar{
+        display: grid;
+    }
+    .logo{
+        background-color: RGB(68,204,170,0.2);
+        border-bottom: 2px solid RGB(68,204,170);
+    }
+    .logoSite{
+        height: 115px;
+        width: 115px;
+        grid-area: logo;
+        margin-top: 9%;
+        margin-left: 5%;
+        margin-bottom: 5%;
+    }
+    .logolangage{
+        display: block;
+        grid-area: logolangage;
+        width:100%;
+        height: 90%;
+        margin-right: 10%;
+    }
+    .logopetit{
+        width: 80%;
+        height: 70%;
+        display: inline-block;
+        margin-left: 100%;
+        margin-right: 2%;
+        margin-top: 10%;
+    }
+    .menu{
+        display: grid;
+        font-size: 1em;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        align-items: center;
+        background-color: RGB(68,204,170,0.2);
+        border-bottom: 2px solid RGB(68,204,170);
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a{
+        color: white;
+        text-align:end;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 200%;
+    }
+    .icon{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-area: icon;
+        color: white;
+        align-items: center;
+        font-size: 3em;
+        background-color: RGB(68,204,170,0.2);
+        border-bottom: 2px solid RGB(68,204,170);
+        justify-items: center;
+    }
+    .barre{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+    }
+    .texte{
+        grid-area: texte;
+        color: white;
+        margin-bottom: 10%;
+        margin-top: 5%;
+        background-color: RGB(68,204,170,0.3);
+        border-radius: 10% 90% 7% 93% / 19% 38% 62% 81% ;
+    }
+    .texte .titre{
+        font-size:xx-large;
+        margin: 2% 0;
+    
+    }
+    .txt{
+        font-size: x-large;
+    }
+    .titre{
+        font-size:xx-large;
+        color: white;
+        margin: 2% 5%;
+    }
+    .cours{
+        background-color:rgba(128, 128, 128, 0.5);
+        margin-left:0%;
+        border-top-right-radius: 5%;
+        border-top-left-radius: 5%;
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
+        width: 50%;
+        grid-area: cours;
+    }
+    .exo{
+        background-color:rgba(128, 128, 128, 0.5);
+        margin-left: 60%;
+        margin-top: 0%;
+        border-top-right-radius: 5%;
+        border-top-left-radius: 5%;
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
+        grid-area: cours;
+        width: 50%;
+    }
+    .liste{
+        font-size:xx-large;
+        color: white;
+        margin: 2% 12%;
+        margin-top: 5%;
+        line-height: 200%;
+        list-style:inside;
+    }
+    .bread{
+        margin-left: 12%;
+        color: white;
+        font-size: x-large;
+        display: inline-block;
+        margin-top: 2%;
+    }
+    .iframe{
+        display: grid;
+        grid-area: cours;
+        margin-left: 25%;
+        width: 60%;
+        height: 60%;
+    }
+    .textecours{
+        display: grid;
+        grid-area: cours;
+        color: white;
+        justify-items: center;
+        align-items: end;
+        margin-top: 40%;
+        margin-left: 10%;
+        line-height: 110%;
+    }
+
+}

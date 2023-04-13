@@ -1,0 +1,24 @@
+<body>
+    <div id="monApp">
+        {{message()}}
+        <div class="m-3">
+        <h2>Liste des courses 🛒 </h2>
+        <input v-model="input" type="text" class="form-control" />
+        <button @click="ajout" class="btn btn-primary mt-3">
+            Ajouter à votre Liste
+        </button>
+        <hr/>
+        <h2 >
+            <ol @click="supprimer(i)" v-if="token===false" v-for="(produit,i) in mesCourses">{{i+1}}-{{produit}}</ol>
+        </h2>
+        <p v-if="mesCourses.length === 0">{{messageErreur}}</p>
+        <button @click="toggle" class="btn btn-primary mt-3">
+            {{messageToggle}}
+        </button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="TPvujs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    </body>

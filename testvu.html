@@ -1,0 +1,32 @@
+<body>
+<div id="bookListApp" class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+    <div class="card p-4">
+        <div class="image d-flex flex-column justify-content-center align-items-center">
+
+            <img :src="image" height="100" width="100">
+            
+            <span class="name mt-3">{{nom}}</span>
+            <!-- v-bind de l'attribut value d'un input -->
+            <input v-model='nom' type="text"  class="texte-center from-control">
+            <!-- <input type="text" v-model ="nameUser"> -->
+            <div class="d-flex flex-row justify-content-center align-items-center gap-2">
+                <!-- interpolation de l'age -->
+                <span>{{age}} ans</span>                
+            </div>
+            <div class="d-flex flex-row justify-content-center align-items-center mt-3">
+                
+                <span>age + 10 :
+                    <span class="follow">{{plusDix()}} ans</span>
+                </span>
+            </div>
+            <div class="px-2 rounded mt-4 date">
+                NB Fétiche :{{nbFetiche()}}
+                
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="testvu.js"></script>
+</body>
