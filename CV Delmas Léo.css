@@ -1,0 +1,60 @@
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* RESET CSS CI-DESSUS */
+p{
+    margin-block-start: 0.5em; ;
+    margin-block-end: 0.5em ;
+}
+.conteneur{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas:
+        "side titre titre titre"
+        "side comp comp comp"
+        "side form form form"
+        "side  exp exp exp"
+}
+.sideBar{
+    background: #E88958;
+    display: grid;
+    grid-area: side;
+}
+/* .sidePro{
+    grid-area: sidePro;
+}
+.sideCon{
+    grid-area: sideCon;
+}
+.sideSa{
+    grid-area: sideSa;
+}
+.sideLo{
+    grid-area: sideLo;
+} */
